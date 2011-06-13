@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+
+<portlet-app version="2.0"
+	xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	<portlet>
+		<portlet-name>hascode-liferay-portlet</portlet-name>
+		<display-name>hascode-liferay-portlet</display-name>
+		<portlet-class>com.hascode.tutorial.portlet.HelloWorldPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>hascode-liferay-portlet</title>
+			<keywords>hascode-liferay-portlet-tutorial</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+
+	<portlet>
+		<portlet-name>hascode-event-sender-portlet</portlet-name>
+		<display-name>hascode-event-sender-portlet</display-name>
+		<portlet-class>com.hascode.tutorial.portlet.EventSenderPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>hascode-event-sender-portlet</title>
+			<keywords>hascode-event-sender-portlet</keywords>
+		</portlet-info>
+
+		<supported-publishing-event>
+			<qname xmlns:hc="http://www.hascode.com/portlet">hc:message</qname>
+		</supported-publishing-event>
+	</portlet>
+
+	<portlet>
+		<portlet-name>hascode-event-receiver-portlet</portlet-name>
+		<display-name>hascode-event-receiver-portlet</display-name>
+		<portlet-class>com.hascode.tutorial.portlet.EventReceiverPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>hascode-event-receiver-portlet</title>
+			<keywords>hascode-event-receiver-portlet</keywords>
+		</portlet-info>
+
+		<supported-processing-event>
+			<qname xmlns:hc="http://www.hascode.com/portlet">hc:message</qname>
+		</supported-processing-event>
+	</portlet>
+
+	<portlet>
+		<portlet-name>hascode-advanced-event-sender-portlet</portlet-name>
+		<display-name>hascode-advanced-event-sender-portlet</display-name>
+		<portlet-class>com.hascode.tutorial.portlet.AdvancedEventSenderPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>hascode-advanced-event-sender-portlet</title>
+			<keywords>hascode-advanced-event-sender-portlet</keywords>
+		</portlet-info>
+
+		<supported-publishing-event>
+			<qname xmlns:hc="http://www.hascode.com/portlet">hc:customMessage</qname>
+		</supported-publishing-event>
+	</portlet>
+
+	<portlet>
+		<portlet-name>hascode-advanced-event-receiver-portlet</portlet-name>
+		<display-name>hascode-advanced-event-receiver-portlet</display-name>
+		<portlet-class>com.hascode.tutorial.portlet.AdvancedEventReceiverPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>hascode-advanced-event-receiver-portlet</title>
+			<keywords>hascode-advanced-event-receiver-portlet</keywords>
+		</portlet-info>
+
+		<supported-processing-event>
+			<qname xmlns:hc="http://www.hascode.com/portlet">hc:customMessage</qname>
+		</supported-processing-event>
+	</portlet>
+	
+		<portlet>
+		<portlet-name>hascode-preferences-portlet</portlet-name>
+		<display-name>hascode-preferences-portlet</display-name>
+		<portlet-class>com.hascode.tutorial.portlet.SimplePreferencesReadingPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>hascode-preferences-portlet</title>
+			<keywords>hascode-preferences-portlet</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>tags</name>
+				<value>portlet</value>
+				<value>tutorial</value>
+				<value>liferay</value>
+				<value>java</value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+
+	<event-definition>
+		<qname xmlns:hc="http://www.hascode.com/portlet">hc:message</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>
+
+	<event-definition>
+		<qname xmlns:hc="http://www.hascode.com/portlet">hc:customMessage</qname>
+		<value-type>com.hascode.tutorial.portlet.CustomPortletMessage</value-type>
+	</event-definition>
+</portlet-app>
