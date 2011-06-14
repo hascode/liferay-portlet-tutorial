@@ -106,8 +106,8 @@
 			<qname xmlns:hc="http://www.hascode.com/portlet">hc:customMessage</qname>
 		</supported-processing-event>
 	</portlet>
-	
-		<portlet>
+
+	<portlet>
 		<portlet-name>hascode-preferences-portlet</portlet-name>
 		<display-name>hascode-preferences-portlet</display-name>
 		<portlet-class>com.hascode.tutorial.portlet.SimplePreferencesReadingPortlet</portlet-class>
@@ -129,6 +129,21 @@
 				<value>java</value>
 			</preference>
 		</portlet-preferences>
+	</portlet>
+
+	<portlet>
+		<portlet-name>hascode-annotation-example</portlet-name>
+		<display-name>hascode-annotation-example</display-name>
+		<portlet-class>com.hascode.tutorial.portlet.SimpleAnnotatedPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>hascode-annotation-example</title>
+			<keywords>hascode-annotation-example</keywords>
+		</portlet-info>
 	</portlet>
 
 	<event-definition>
