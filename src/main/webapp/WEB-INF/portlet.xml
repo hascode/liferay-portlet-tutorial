@@ -145,6 +145,35 @@
 			<keywords>hascode-annotation-example</keywords>
 		</portlet-info>
 	</portlet>
+	
+	<portlet>
+		<portlet-name>1</portlet-name>
+		<display-name>JSF2-Portlet-Bridge</display-name>
+		<portlet-class>org.portletfaces.bridge.GenericFacesPortlet</portlet-class>
+		<init-param>
+			<name>javax.portlet.faces.defaultViewId.view</name>
+			<value>/xhtml/viewMode.xhtml</value>
+		</init-param>
+		<init-param>
+			<name>javax.portlet.faces.defaultViewId.edit</name>
+			<value>/xhtml/editMode.xhtml</value>
+		</init-param>
+		<init-param>
+			<name>javax.portlet.faces.defaultViewId.help</name>
+			<value>/xhtml/helpMode.xhtml</value>
+		</init-param>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>help</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>JSF2-Portlet-Bridge</title>
+			<short-title>JSF2-Portlet-Bridge</short-title>
+			<keywords>JSF2-Portlet-Bridge</keywords>
+		</portlet-info>
+	</portlet>
 
 	<event-definition>
 		<qname xmlns:hc="http://www.hascode.com/portlet">hc:message</qname>
