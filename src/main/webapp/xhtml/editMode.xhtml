@@ -5,5 +5,14 @@
 	<h:head />
 	<h:body>
 		<h:outputText value="EDIT" />
+		<h:form>
+			<h:messages globalOnly="true" />
+			<h:selectOneMenu id="selectSortType" value="#{userBean.sortType}">
+				<f:selectItem id="sort-normal" itemLabel="Normal Sorted" itemValue="normal" />
+				<f:selectItem id="sort-reverse" itemLabel="Reverse Sorted" itemValue="reverse" />
+			</h:selectOneMenu>
+			<hr />
+			<h:commandButton actionListener="#{userBean.save}" value="Submit" />
+		</h:form>
 	</h:body>
 </f:view>
